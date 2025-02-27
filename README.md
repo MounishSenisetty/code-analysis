@@ -15,7 +15,7 @@ This VS Code extension analyzes code for security vulnerabilities, coding issues
    ```
 2. Navigate to the extension folder:
    ```sh
-   cd ai-code-analyzer-vscode
+   cd code-analysis
    ```
 3. Install dependencies:
    ```sh
