@@ -1,65 +1,60 @@
-# mounish README
+# AI Code Analyzer for VS Code
 
-This is the README for your extension "mounish". After writing up a brief description, we recommend including the following sections.
+This VS Code extension analyzes code for security vulnerabilities, coding issues, and best practices using **Google Gemini AI**. It highlights problems in the editor, provides explanations, and suggests fixes.
 
 ## Features
+- ✅ **Static Code Analysis**: Identifies security flaws, redundant code, and poor coding practices.
+- 🔍 **AI-Powered Analysis**: Uses **Google Gemini AI** to analyze code.
+- 🚀 **Quick Fix Suggestions**: AI-generated fixes can be applied directly in VS Code.
+- 💡 **Hover Explanations**: See detailed issue descriptions and fixes when hovering over problems.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Installation
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/your-repo/ai-code-analyzer-vscode.git
+   ```
+2. Navigate to the extension folder:
+   ```sh
+   cd ai-code-analyzer-vscode
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Open VS Code and press `F5` to run the extension.
 
-For example if there is an image subfolder under your extension project workspace:
+## Configuration
+1. Open the `extension.js` file.
+2. Replace `YOUR_GEMINI_API_KEY` with your actual **Google Gemini API key**:
+   ```js
+   const API_KEY = 'YOUR_GEMINI_API_KEY';
+   ```
+3. Save the file and restart VS Code.
 
-\!\[feature X\]\(images/feature-x.png\)
+## Usage
+- Open any source code file in VS Code.
+- Run the command **"Analyze Code"** from the Command Palette (`Ctrl+Shift+P`).
+- Issues will be highlighted in the editor with AI-generated fixes.
+- Hover over an issue to see explanations and suggestions.
+- Click on an issue and apply the **Quick Fix** to resolve it.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Example Output
+**Before Analysis:**
+```js
+const userInput = req.query.user; // Potential SQL Injection Vulnerability
+```
 
-## Requirements
+**After AI Suggestion:**
+```js
+const userInput = encodeURIComponent(req.query.user); // Secure against SQL Injection
+```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Troubleshooting
+- Ensure you have a valid **Google Gemini API key**.
+- Restart VS Code if the extension does not load correctly.
+- Check the VS Code **Output Panel** for logs.
 
-## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Contributions
+Contributions are welcome! Feel free to submit a PR or open an issue.
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
