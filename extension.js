@@ -1,7 +1,7 @@
 const vscode = require('vscode');
 const axios = require('axios');
 
-const API_KEY = 'AIzaSyDyQZzZPKB3XBAzHeUuPwPoFWPWhU484Vg';
+const API_KEY = 'Keep yours';
 const API_URL = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" + API_KEY;
 const Prompt = `You are an expert AI Code Reviewer and Security Auditor. Your task is to analyze the following code snippet for:
 
