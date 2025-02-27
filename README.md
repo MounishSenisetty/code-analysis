@@ -11,7 +11,7 @@ This VS Code extension analyzes code for security vulnerabilities, coding issues
 ## Installation
 1. Clone this repository:
    ```sh
-   git clone https://github.com/your-repo/ai-code-analyzer-vscode.git
+   git clone https://github.com/MounishSenisetty/code-analysis.git
    ```
 2. Navigate to the extension folder:
    ```sh
